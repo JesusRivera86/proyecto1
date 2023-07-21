@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Fasthand&family=Lugrasimo&family=Open+Sans&family=Roboto&display=swap');
+:root {
+    --color-primary-start: rgb(113, 106, 176);
+    --color-primary-end: rgb(26, 26, 27);
+    --color-secondary: #00ff00;
+    --color-background: #f9f9f9;
+    --color-text: rgb(245, 245, 245);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Lugrasimo', cursive;
+    width: 100%;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+}
+
+header h4 {
+    margin-left: 10px;
+    color: whitesmoke;
+    height: 20px;
+}
+
+header input[type="search"] {
+    width: 300px;
+    height: 20px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Lugrasimo', cursive;
+}
+
+header a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+header a span {
+    color: rgb(240, 229, 229);
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+nav {
+    padding: 10px;
+}
+
+.nav-enlaces {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-enlaces li {
+    display: inline;
+    margin: 10px;
+}
+
+.nav-enlaces li:last-child {
+    margin-right: 0;
+}
+
+.nav-enlaces a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 62%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    background-image: linear-gradient(0deg, var(--color-primary-start), var(--color-primary-end));
+    color: var(--color-text);
+}
+
+.inicia-sesion {
+    margin-right: 5px;
+}
+
+.inicia-sesion,
+.registrate {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid silver;
+    padding: 10px;
+    height: 100%;
+    font-family: 'Lugrasimo', cursive;
+}
+
+.inicia-sesion h3,
+.registrate h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+p {
+    margin-bottom: 20px;
+    color: whitesmoke;
+}
+
+.inicia-sesion form,
+.registrate form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.inicia-sesion input,
+.registrate input,
+.inicia-sesion button,
+.registrate button {
+    margin-bottom: 10px;
+}
+
+.inicia-sesion button,
+.registrate button {
+    width: 150px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: rgb(113, 106, 176);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section div {
+    text-align: center;
+    margin: 10px;
+}
+
+section img {
+    width: 50px;
+}
+
+section h5 {
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-family: 'Lugrasimo', cursive;
+}
+
+section h6 {
+    font-size: 10px;
+    color: #999;
+    font-family: 'Lugrasimo', cursive;
+}
+
+footer {
+    background-image: linear-gradient(0deg, var(--color-primary-end), var(--color-primary-start));
+    color: var(--color-text);
+    padding: 10px;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-footer img {
+    width: 125px;
+    height: 75px;
+}
+
+.logo-footer h4 {
+    font-size: 30px;
+    margin-left: 10px;
+    color: whitesmoke;
+    font-family: 'Lugrasimo', cursive;
+}
+
+.ayuda-container,
+.politica-container {
+    flex: 1;
+}
+
+.ayuda-container ul,
+.politica-container ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+    margin-left: 10px;
+}
+
+.ayuda-container li,
+.politica-container li {
+    gap: 20px;
+    margin-bottom: 5px;
+}
+
+.subscribe-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-container h5 {
+    margin-bottom: 10px;
+    font-family: 'Lugrasimo', cursive;
+}
+
+.subscribe-container form {
+    margin-bottom: 10px;
+}
+
+.subscribe-container form input,
+.subscribe-container form button {
+    margin-bottom: 10px;
+}
+
+.redes-sociales img {
+    margin-left: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+/* Estilos para la media query */
+
+@media screen and (max-width: 375px) {
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header img {
+    margin-bottom: 10px;
+  }
+  header a {
+    margin-top: 5px;
+  }
+
+  nav {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-primary-start);
+  }
+
+  nav ul {
+    display: block;
+  }
+
+  nav li {
+    margin: 10px;
+  }
+
+  nav a {
+    color: whitesmoke;
+    font-weight: bold;
+  }
+  .nav-enlaces {
+    display: none;
+  }
+
+  .nav-media-query {
+    display: inline;
+    margin-right: 20px;
+    cursor: pointer;
+    color: whitesmoke;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  #menu-nav-enlaces {
+    display: none;
+  }
+
+  #menu-nav-enlaces:checked ~ nav .nav-enlaces {
+    display: block;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inicia-sesion {
+    margin-right: 0px;
+    border-bottom: 0px;
+  }
+
+  section {
+    background-color: rgb(113, 106, 176);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+  section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+  }
+
+  section img {
+    width: 50px;
+  }
+
+  section h5 {
+    font-size: 8px;
+    margin-bottom: 5px;
+  }
+
+  section h6 {
+    font-size: 8px;
+    color: #999;
+  }
+
+  footer {
+    background-image: linear-gradient(
+      0deg,
+      var(--color-primary-end),
+      var(--color-primary-start)
+    );
+    color: var(--color-text);
+  }
+  .logo-footer img {
+    margin-left: 20px;
+  }
+  .logo-footer h4 {
+    margin-left: 20px;
+    font-size: 25px;
+  }
+
+  .ayuda-container ul, .politica-container ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .redes-sociales img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 713px) {
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header img {
+    margin-bottom: 10px;
+  }
+  header a {
+    margin-top: 5px;
+  }
+
+  nav {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color-primary-start);
+  }
+
+  nav ul {
+    display: block;
+  }
+
+  nav li {
+    margin: 10px;
+  }
+
+  nav a {
+    color: whitesmoke;
+    font-weight: bold;
+  }
+  .nav-enlaces {
+    display: none;
+  }
+
+  .nav-media-query {
+    display: inline;
+    margin-right: 20px;
+    cursor: pointer;
+    color: whitesmoke;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  #menu-nav-enlaces {
+    display: none;
+  }
+
+  #menu-nav-enlaces:checked ~ nav .nav-enlaces {
+    display: block;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inicia-sesion {
+    margin-right: 0px;
+    border-bottom: 0px;
+  }
+
+  section {
+    background-color: rgb(113, 106, 176);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+  section div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+  }
+
+  section img {
+    width: 50px;
+  }
+
+  section h5 {
+    font-size: 8px;
+    margin-bottom: 5px;
+  }
+
+  section h6 {
+    font-size: 8px;
+    color: #999;
+  }
+
+  footer {
+    background-image: linear-gradient(
+      0deg,
+      var(--color-primary-end),
+      var(--color-primary-start)
+    );
+    color: var(--color-text);
+  }
+  .logo-footer img {
+    margin-left: 20px;
+  }
+  .logo-footer h4 {
+    margin-left: 20px;
+    font-size: 25px;
+  }
+
+  .ayuda-container ul, .politica-container ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .redes-sociales img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+}
